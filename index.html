@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Jokes And Advice Generator</title>
+  <!-- Tailwind CSS for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+
+
+    /* Default (light) theme */
+    body {
+      color: rgb(62, 60, 89);
+      background-color: lab(9.52% -0.27 -6.4);
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Dark theme based on OS preference */
+    @media (prefers-color-scheme: dark) {
+
+      /* Apply dark styles to other elements here */
+      .your-card-element {
+        background-color: var(--dark-element-background);
+        border-color: var(--dark-border-color);
+      }
+    }
+
+    .container {
+      background: black;
+      border: 1px solid #a5d6ff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body class="flex items-center justify-center min-h-screen p-4">
+
+  <div class="container w-full max-w-lg p-8 rounded-2xl text-center">
+
+    <h1 class="text-3xl font-bold text-red-600 mb-6">Advice & Jokes</h1>
+
+    <!-- Joke/Advice Display Area -->
+    <div id="display-container"
+      class="bg-gray-100 p-6 rounded-xl flex items-center justify-center min-h-[150px] relative">
+
+      <div id="spinner" class="hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div class="w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin"></div>
+      </div>
+      <!-- Main Content Area -->
+      <div id="content-display" class="flex flex-col gap-4 w-full">
+        <p id="main-text" class="text-xl text-gray-700">Click a button to get started!</p>
+        <div id="multiple-jokes-container" class="hidden flex-col gap-2 w-full text-left"></div>
+      </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6">
+      <button id="new-advice-btn"
+        class="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-full shadow-md transition-colors duration-200">
+        Get New Advice
+      </button>
+
+      <button id="copy-btn"
+        class="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-full shadow-md transition-colors duration-200">
+        Copy
+      </button>
+
+
+      <button id="multi-joke-btn"
+        class="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-full shadow-md transition-colors duration-200">
+        Get 3 Jokes
+      </button>
+    </div>
+
+    <!-- Temporary Message Box for Share functionality -->
+    <div id="message-box" class="mt-4 p-3 bg- #a5d6ff- 400   text-white rounded-lg hidden transition-opacity duration-300">
+            Copied to clipboard!
+        </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
