@@ -2,6 +2,12 @@
 
 An elegant, minimal web app that fetches a random piece of advice and multiple jokes with a single click. Built with plain HTML, CSS (Tailwind via CDN), and  JavaScript.
 
+##Preview
+
+- [Random Advise & Joke Generator](https://haseebjaved4212.github.io/Random-Joke-And-Advice-Generator/)
+
+
+
 ## Features
 
 - Fetch a fresh piece of advice from the Advice Slip API
